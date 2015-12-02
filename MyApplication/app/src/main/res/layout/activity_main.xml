@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.lei.android.sharedemo.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/tv" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ShareMessage"
+        android:id="@+id/btn_share_message"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="toShareMessage"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_share_message"
+        android:layout_above="@+id/btn_share_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:hint="请输入分享内容"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/btn_register"
+        android:layout_above="@+id/edit_share_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:onClick="toRegisterApp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享到朋友圈"
+        android:id="@+id/cbox_share_friends"
+        android:layout_below="@+id/btn_share_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp" />
+</RelativeLayout>

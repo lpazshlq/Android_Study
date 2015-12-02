@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lesson11_Homework</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="homework01">第一题</string>
+    <string name="homework02">第二题</string>
+    <string name="homework03">第三题</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="homework02_cbox_all">全选</string>
+    <string name="homework02_cbox_none">全不选</string>
+    <string name="homework02_btn_addlist">加入播放列表</string>
+    <string name="refresh">刷新</string>
+</resources>

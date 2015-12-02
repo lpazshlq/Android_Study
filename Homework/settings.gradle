@@ -1,0 +1,3 @@
+include ':app', ':lesson13_homework', ':lesson14_homework', ':mediaplayer_lei', ':wb_app_lei', 'lesson08_homework', 'lesson09_homework', 'lesson09_homework_provider', 'lesson10_homework', 'lesson11_homework', 'lesson12_homework', 'showapi_android_sdk', ':support4Demos', ':showapi'
+include ':multiThreadDownload_OnlinePlayMusic'
+include ':weiboSDK'

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fit_Study.iml" filepath="$PROJECT_DIR$/Fit_Study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiorecorder_demo/audiorecorder_demo.iml" filepath="$PROJECT_DIR$/audiorecorder_demo/audiorecorder_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jni_demo/jni_demo.iml" filepath="$PROJECT_DIR$/jni_demo/jni_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recorderclient/recorderclient.iml" filepath="$PROJECT_DIR$/recorderclient/recorderclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recordserver/recordserver.iml" filepath="$PROJECT_DIR$/recordserver/recordserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socializationSample/socializationSample.iml" filepath="$PROJECT_DIR$/socializationSample/socializationSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket_client/socket_client.iml" filepath="$PROJECT_DIR$/socket_client/socket_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket_server/socket_server.iml" filepath="$PROJECT_DIR$/socket_server/socket_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study/study.iml" filepath="$PROJECT_DIR$/study/study.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lesson08_Homework</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="homework01">第一题</string>
+    <string name="homework02">第二题</string>
+    <string name="homework03">第三题</string>
+    <string name="input_homework01">请输入内容</string>
+    <string name="write">write</string>
+    <string name="read_homework01">read</string>
+    <string name="homework02_textsize01">15sp</string>
+    <string name="homework02_30sp">30sp</string>
+    <string name="homework02_15sp">15sp</string>
+    <string name="homework02_45sp">45sp</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="homework03_new_xml">生成XML文件</string>
+    <string name="homework03_read_xml">读取XML文件</string>
+</resources>

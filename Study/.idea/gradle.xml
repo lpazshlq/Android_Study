@@ -10,6 +10,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/act02" />
+            <option value="$PROJECT_DIR$/act03" />
+            <option value="$PROJECT_DIR$/act04" />
+            <option value="$PROJECT_DIR$/act05" />
           </set>
         </option>
       </GradleProjectSettings>

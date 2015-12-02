@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Lesson14_Homework</string>
+    <string name="main_btn_homework01">第一题</string>
+    <string name="main_btn_homework02">第二题</string>
+    <string name="main_btn_homework03">第三题</string>
+    <string name="helloworld">Hello world!</string>
+    <string name="homework01_menu_item01">主题</string>
+    <string name="homework01_menu_item02">Settings</string>
+    <string name="homework01_menu_item03">关于</string>
+    <string name="homework01_menu_item01_group_item01">主题一</string>
+    <string name="homework01_menu_item01_group_item02">主题二</string>
+    <string name="homework01_menu_item01_group_item03">主题三</string>
+    <string name="homework01_menu_item02_group_item01">Setting1</string>
+    <string name="homework01_menu_item02_group_item02">Setting2</string>
+    <string name="homework01_menu_item02_group_item03">Setting3</string>
+</resources>

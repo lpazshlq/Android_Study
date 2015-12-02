@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Homework.iml" filepath="$PROJECT_DIR$/Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson08_homework/lesson08_homework.iml" filepath="$PROJECT_DIR$/lesson08_homework/lesson08_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson09_homework/lesson09_homework.iml" filepath="$PROJECT_DIR$/lesson09_homework/lesson09_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson09_homework_provider/lesson09_homework_provider.iml" filepath="$PROJECT_DIR$/lesson09_homework_provider/lesson09_homework_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson10_homework/lesson10_homework.iml" filepath="$PROJECT_DIR$/lesson10_homework/lesson10_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson11_homework/lesson11_homework.iml" filepath="$PROJECT_DIR$/lesson11_homework/lesson11_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson12_homework/lesson12_homework.iml" filepath="$PROJECT_DIR$/lesson12_homework/lesson12_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson13_homework/lesson13_homework.iml" filepath="$PROJECT_DIR$/lesson13_homework/lesson13_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson14_homework/lesson14_homework.iml" filepath="$PROJECT_DIR$/lesson14_homework/lesson14_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mediaplayer_lei/mediaplayer_lei.iml" filepath="$PROJECT_DIR$/mediaplayer_lei/mediaplayer_lei.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiThreadDownload_OnlinePlayMusic/multiThreadDownload_OnlinePlayMusic.iml" filepath="$PROJECT_DIR$/multiThreadDownload_OnlinePlayMusic/multiThreadDownload_OnlinePlayMusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/showapi/showapi.iml" filepath="$PROJECT_DIR$/showapi/showapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/showapi_android_sdk/showapi_android_sdk.iml" filepath="$PROJECT_DIR$/showapi_android_sdk/showapi_android_sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/support4Demos/support4Demos.iml" filepath="$PROJECT_DIR$/support4Demos/support4Demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wb_app_lei/wb_app_lei.iml" filepath="$PROJECT_DIR$/wb_app_lei/wb_app_lei.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weiboSDK/weiboSDK.iml" filepath="$PROJECT_DIR$/weiboSDK/weiboSDK.iml" />
+    </modules>
+  </component>
+</project>

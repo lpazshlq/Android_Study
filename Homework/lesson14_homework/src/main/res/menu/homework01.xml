@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_homework01_item01"
+        android:showAsAction="always"
+        android:title="@string/homework01_menu_item01" >
+        <menu >
+            <group android:checkableBehavior="single">
+                <item android:title="@string/homework01_menu_item01_group_item01"
+                    android:id="@+id/menu_homework01_group01_item01"/>
+                <item android:title="@string/homework01_menu_item01_group_item02"
+                    android:id="@+id/menu_homework01_group01_item02"/>
+                <item android:title="@string/homework01_menu_item01_group_item03"
+                    android:id="@+id/menu_homework01_group01_item03"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_homework01_item02"
+        android:showAsAction="never"
+        android:title="@string/homework01_menu_item02" >
+        <menu >
+            <group android:checkableBehavior="none">
+                <item android:id="@+id/menu_homework01_group02_item01"
+                    android:icon="@android:drawable/checkbox_on_background"
+                    android:title="@string/homework01_menu_item02_group_item01"/>
+                <item android:id="@+id/menu_homework01_group02_item02"
+                    android:icon="@android:drawable/checkbox_on_background"
+                    android:title="@string/homework01_menu_item02_group_item02"/>
+                <item android:id="@+id/menu_homework01_group02_item03"
+                    android:icon="@android:drawable/checkbox_on_background"
+                    android:title="@string/homework01_menu_item02_group_item03"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_homework01_item03"
+        android:showAsAction="never"
+        android:title="@string/homework01_menu_item03" />
+</menu>
