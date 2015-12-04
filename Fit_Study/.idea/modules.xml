@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DanmakuFlameMaster/DanmakuFlameMaster.iml" filepath="$PROJECT_DIR$/DanmakuFlameMaster/DanmakuFlameMaster.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fit_Study.iml" filepath="$PROJECT_DIR$/Fit_Study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sample/Sample.iml" filepath="$PROJECT_DIR$/Sample/Sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/audiorecorder_demo/audiorecorder_demo.iml" filepath="$PROJECT_DIR$/audiorecorder_demo/audiorecorder_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jni_demo/jni_demo.iml" filepath="$PROJECT_DIR$/jni_demo/jni_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/recorderclient/recorderclient.iml" filepath="$PROJECT_DIR$/recorderclient/recorderclient.iml" />
