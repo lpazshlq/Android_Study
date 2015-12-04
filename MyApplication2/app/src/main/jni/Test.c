@@ -1,8 +1,6 @@
 #include <jni.h>
 #include <stddef.h>
 #include "featureget.h"
-#include "unistd.h"
-
 
 
 static double IIR_B[5][7] = {
@@ -297,19 +295,21 @@ Java_com_lei_android_myapplication_JNI_inputPCM(JNIEnv *env, jclass type, jbyteA
     (*env)->ReleaseByteArrayElements(env, pcm_, pcm, 0);
 }
 
-JNIEXPORT jcharArray JNICALL
-Java_com_lei_android_myapplication_JNI_getResult(JNIEnv *env, jclass type) {
-    returnval result = get_feature();
-    char *cs = (char *) result.boolvalsend;
-    if (result.status==1){
-        jcharArray data = (*env)->NewCharArray(env,5*16);
-        (*env)->SetCharArrayRegion(env,data,0,5*16, (const jchar *) cs);
-        return data;
-    }
-    return NULL;
-}
-
 JNIEXPORT void JNICALL
 Java_com_lei_android_myapplication_JNI_init_1Featureget(JNIEnv *env, jclass type) {
     init_featureget();
+}
+
+JNIEXPORT jbyteArray JNICALL
+Java_com_lei_android_myapplication_JNI_getPcmResult(JNIEnv *env, jclass type) {
+    returnval result = get_feature();
+    if (result.status==1){
+        /* 将获取的result数据转换成byte数组进行返回 */
+        jbyte *b = (jbyte *) result.boolvalsend;
+        jbyteArray data = (*env)->NewByteArray(env,5*16);
+        (*env)->SetByteArrayRegion(env,data,0,5*16,b);
+
+        return data;
+    }
+    return NULL;
 }

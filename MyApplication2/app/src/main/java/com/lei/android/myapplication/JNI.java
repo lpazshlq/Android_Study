@@ -9,5 +9,5 @@ public class JNI {
 
     public static native void inputPCM(byte[] pcm, int datasize, int rate, int channelnum);
 
-    public static native char[] getResult();
+    public static native byte[] getPcmResult();
 }

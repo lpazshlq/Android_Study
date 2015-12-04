@@ -3,19 +3,11 @@ package com.lei.android.myapplication;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -78,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 while (isRecording){
                     try {
                         Thread.sleep(500);
-                        char[] data = JNI.getResult();
+                        byte[] data = JNI.getPcmResult();
                         Log.i("test", Arrays.toString(data));
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -101,26 +93,7 @@ public class MainActivity extends AppCompatActivity {
             audioRecord.release();
             audioRecord = null;
             recordingThread = null;
+            getResultThread = null;
         }
-    }
-
-    private byte[] getBytes (char[] chars) {
-        Charset cs = Charset.forName ("UTF-8");
-        CharBuffer cb = CharBuffer.allocate (chars.length);
-        cb.put(chars);
-        cb.flip();
-        ByteBuffer bb = cs.encode (cb);
-
-        return bb.array();
-    }
-
-    private char[] getChars (byte[] bytes) {
-        Charset cs = Charset.forName ("UTF-8");
-        ByteBuffer bb = ByteBuffer.allocate (bytes.length);
-        bb.put(bytes);
-        bb.flip();
-        CharBuffer cb = cs.decode (bb);
-
-        return cb.array();
     }
 }
