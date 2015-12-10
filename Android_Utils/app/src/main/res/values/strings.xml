@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Android_Utils</string>
+
+    <string-array name="test">
+        <item>徐汇区</item>
+        <item>杨浦区</item>
+        <item>卢湾区</item>
+        <item>宝山区</item>
+        <item>静安区</item>
+        <item>闸北区</item>
+        <item>长宁区</item>
+        <item>嘉定区</item>
+        <item>金山区</item>
+        <item>浦东新区</item>
+    </string-array>
 </resources>

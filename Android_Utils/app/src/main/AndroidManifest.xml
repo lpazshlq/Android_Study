@@ -11,10 +11,18 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 下拉刷新Demo-->
+        <activity android:name=".ListViewPullRefresh">
+            <intent-filter>
+                <action android:name="com.lei.android.ListViewPullRefresh" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
