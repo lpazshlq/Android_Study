@@ -11,7 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/exercise" />
             <option value="$PROJECT_DIR$/pullrefresh_listview" />
+            <option value="$PROJECT_DIR$/waveview" />
           </set>
         </option>
       </GradleProjectSettings>

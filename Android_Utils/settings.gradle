@@ -1,1 +1,1 @@
-include ':app', ':pullrefresh_listview'
+include ':app', ':pullrefresh_listview', ':waveview', ':exercise'
