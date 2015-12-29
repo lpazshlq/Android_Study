@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                             finish();
                         } else {
                             ssoHandler.authorizeWeb(new AuthListener());
+//                            ssoHandler.authorize(new AuthListener());
                         }
                     }
                 });

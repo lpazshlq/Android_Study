@@ -1,12 +1,22 @@
 ECLIPSE ANDROID PROJECT IMPORT SUMMARY
 ======================================
 
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
 Ignored Files:
 --------------
 The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
+* debug.keystore
 * proguard-project.txt
 
 Replaced Jars with Dependencies:
@@ -26,12 +36,18 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => weiboSDK\src\main\AndroidManifest.xml
-* assets\ => weiboSDK\src\main\assets
-* libs\weiboSDKCore_3.1.2.jar => weiboSDK\libs\weiboSDKCore_3.1.2.jar
-* lint.xml => weiboSDK\lint.xml
-* res\ => weiboSDK\src\main\res\
-* src\ => weiboSDK\src\main\java\
+* AndroidManifest.xml => weiboSDKDemo\src\main\AndroidManifest.xml
+* assets\ => weiboSDKDemo\src\main\assets\
+* libs\arm64-v8a\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\arm64-v8a\libweibosdkcore.so
+* libs\armeabi-v7a\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\armeabi-v7a\libweibosdkcore.so
+* libs\armeabi\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\armeabi\libweibosdkcore.so
+* libs\mips64\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\mips64\libweibosdkcore.so
+* libs\mips\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\mips\libweibosdkcore.so
+* libs\x86\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\x86\libweibosdkcore.so
+* libs\x86_64\libweibosdkcore.so => weiboSDKDemo\src\main\jniLibs\x86_64\libweibosdkcore.so
+* lint.xml => weiboSDKDemo\lint.xml
+* res\ => weiboSDKDemo\src\main\res\
+* src\ => weiboSDKDemo\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------

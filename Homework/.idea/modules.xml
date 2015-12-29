@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/support4Demos/support4Demos.iml" filepath="$PROJECT_DIR$/support4Demos/support4Demos.iml" />
       <module fileurl="file://$PROJECT_DIR$/wb_app_lei/wb_app_lei.iml" filepath="$PROJECT_DIR$/wb_app_lei/wb_app_lei.iml" />
       <module fileurl="file://$PROJECT_DIR$/weiboSDK/weiboSDK.iml" filepath="$PROJECT_DIR$/weiboSDK/weiboSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weiboSDKDemo/weiboSDKDemo.iml" filepath="$PROJECT_DIR$/weiboSDKDemo/weiboSDKDemo.iml" />
     </modules>
   </component>
 </project>

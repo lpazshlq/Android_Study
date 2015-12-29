@@ -28,7 +28,6 @@ public class UserActivity extends AppCompatActivity implements RadioGroup.OnChec
     private RadioGroup radioGroup;
     private RadioButton rbtn_home,rbtn_discover,rbtn_message,rbtn_profile;
     private ViewPager mViewPager;
-    private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
     private int isSelected_rbtn = R.id.rbtn_home_activity_user;
     private int[] rbtns = {R.id.rbtn_home_activity_user,R.id.rbtn_message_activity_user,R.id.rbtn_discover_activity_user,R.id.rbtn_profile_activity_user};
