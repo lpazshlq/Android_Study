@@ -2,7 +2,6 @@
 #include <stddef.h>
 #include "featureget.h"
 
-
 static double IIR_B[5][7] = {
         {1.4210854715202e-16, 2.99149005633775e-05, -6.06060828489678e-05, 2.32879052967611e-06, 5.75010560137275e-05, -2.91386644754015e-05, 0}
         ,
@@ -120,8 +119,15 @@ int input_pcm ( char* pdata, int datasize, int rate, int channelnum)
                         //fflush(pfilet);
                     }
                     //sum = sum * loudpara[n];
-                    pgetter->diffval[n] = sum - pgetter->currval[n];
-                    pgetter->currval[n] = sum;
+                    //保存最新的5个值作为核
+                    memmove(&pgetter->currvals[n][1], &pgetter->currvals[n][0], sizeof (float)*4);
+                    pgetter->currvals[n][0] = sum;
+                    //pgetter->slopeval[n] = pgetter->currvals[n][3] - pgetter->currvals[n][1] + pgetter->currvals[n][4] - pgetter->currvals[n][0];
+                    pgetter->slopeval[n] = pgetter->currvals[n][3] - pgetter->currvals[n][1];
+                    pgetter->peakval[n] = pgetter->currvals[n][2] * 4 - pgetter->currvals[n][1] - pgetter->currvals[n][3] \
+                    - pgetter->currvals[n][0] - pgetter->currvals[n][4];
+                    pgetter->hatval[n] = 0 - pgetter->currvals[n][1] - pgetter->currvals[n][3] \
+                    + pgetter->currvals[n][0] +  pgetter->currvals[n][4];
 
                     memmove(pgetter->feat_win[n], pgetter->feat_win[n] + WIN_STEP, sizeof (double)*(WIN_SIZE - WIN_STEP));
 
@@ -150,15 +156,31 @@ int input_pcm ( char* pdata, int datasize, int rate, int channelnum)
 int input_feature ()
 {
     int i=0;
-    int currpos =pgetter->boolcurrsize;
+    int currpos =BOOLSIZE - pgetter->boolcurrsize - 1;
     for (i=0; i<FILTER_NUM;i++) {
-        if (pgetter->diffval[i] > 0) {
+        //slopeval
+        if (pgetter->slopeval[i] >= 0) {
             pgetter->boolval[i][currpos] = 1;
         }
         else
         {
             pgetter->boolval[i][currpos] = 0;
         }
+
+#if 1
+        //peakval
+        if (pgetter->peakval[i] >= 0) {
+            pgetter->boolval[i][currpos] |= 2;
+        }
+
+        //hatval
+        if (pgetter->hatval[i] >= 0) {
+            pgetter->boolval[i][currpos] |= 4;
+        }
+
+#endif
+
+
 
     }
     pgetter->boolcurrsize++;
@@ -285,12 +307,14 @@ int reset_filter(discrete_filter *pfilter)
 
 }
 
+
+
 JNIEXPORT void JNICALL
 Java_com_lei_android_myapplication_JNI_inputPCM(JNIEnv *env, jclass type, jbyteArray pcm_,
                                                 jint datasize, jint rate, jint channelnum) {
     jbyte *pcm = (*env)->GetByteArrayElements(env, pcm_, NULL);
 
-    input_pcm(pcm,datasize,rate,channelnum);
+    input_pcm(pcm, datasize, rate, channelnum);
 
     (*env)->ReleaseByteArrayElements(env, pcm_, pcm, 0);
 }
@@ -303,11 +327,11 @@ Java_com_lei_android_myapplication_JNI_init_1Featureget(JNIEnv *env, jclass type
 JNIEXPORT jbyteArray JNICALL
 Java_com_lei_android_myapplication_JNI_getPcmResult(JNIEnv *env, jclass type) {
     returnval result = get_feature();
-    if (result.status==1){
+    if (result.status == 1) {
         /* 将获取的result数据转换成byte数组进行返回 */
         jbyte *b = (jbyte *) result.boolvalsend;
-        jbyteArray data = (*env)->NewByteArray(env,5*16);
-        (*env)->SetByteArrayRegion(env,data,0,5*16,b);
+        jbyteArray data = (*env)->NewByteArray(env, 5 * 16);
+        (*env)->SetByteArrayRegion(env, data, 0, 5 * 16, b);
 
         return data;
     }

@@ -59,8 +59,13 @@ typedef struct _featureget
     int64_t sample_8k_num; //转成8K的采样数
     double feat_win[FILTER_NUM][WIN_SIZE]; //计算特征值的采样窗
     int feat_win_pos;//feat_win窗当前填满的位置
-    float currval[FILTER_NUM];/*当前特征值*/
-    float diffval[FILTER_NUM];/*差分后的特征值*/
+
+    
+    float currvals[FILTER_NUM][5]; /*当前特征值，保留最新的5个作为核*/
+    float slopeval[FILTER_NUM]; /*冲坡的特征值*/
+    float peakval[FILTER_NUM]; /*波峰的特征值*/
+    float hatval[FILTER_NUM]; /*墨西哥帽的特征值*/
+    
     char boolval[FILTER_NUM][BOOLSIZE];/*累积1秒钟的数据，准备更新发送缓冲*/
     int boolcurrsize;/*当前已经完成bool特征值*/
     char boolvalsend[FILTER_NUM][BOOLSIZE];/*发送缓冲*/
